@@ -1,4 +1,4 @@
-// START javafx-plugin INCLUDE
+// ==== START javafx-plugin INCLUDE ====
 // http://speling.shemnon.com/blog/2013/01/30/gradle-javafx-plugin-0-dot-2-0-released/
 buildscript {
     repositories {
@@ -20,11 +20,10 @@ buildscript {
 if (!project.plugins.findPlugin(org.bitbucket.shemnon.javafxplugin.JavaFXPlugin)) {
     project.apply(plugin: org.bitbucket.shemnon.javafxplugin.JavaFXPlugin)
 }
-// END javafx-plugin INCLUDE
+// ==== END javafx-plugin INCLUDE ====
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-
 
 group = 'com.artclod'
 version = '0.0.0'
@@ -33,4 +32,12 @@ sourceCompatibility = JavaVersion.VERSION_1_7
 javafx {
     id = "javafx-html-desktop-app"
     mainClass = 'com.artclod.deskweb.DesktopWebApplication'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile    group: 'org.eclipse.jetty.aggregate',    name: 'jetty-all-server',    version: '8.1.10.v20130312'
 }
