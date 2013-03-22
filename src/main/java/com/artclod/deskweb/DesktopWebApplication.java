@@ -9,12 +9,12 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import netscape.javascript.JSObject;
 
 import org.eclipse.jetty.server.Server;
 
 import com.artclod.deskweb.support.AlertToSystemErr;
 import com.artclod.deskweb.support.JavaFXWebApplicationUtil;
-import com.sun.webpane.webkit.JSObject;
 
 public class DesktopWebApplication extends Application {
 	private static final String HTTP_LOCALHOST = "http://localhost:";
